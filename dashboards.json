@@ -1,0 +1,22 @@
+{
+  "dashboards": [
+    {
+      "_id": "000000000000000000000003",
+      "name": "Dashboard DMC",
+      "description": "Dashboard comercial con detalle de mundo, tiendas y canales.",
+      "icon": "https:\/\/s3-us-west-2.amazonaws.com\/erea-images\/construfacil.png",
+      "url": "https:\/\/erea.shinyapps.io\/dashboard-dmc\/",
+      "type": "ShinyApps",
+      "__v": 0
+    },
+    {
+      "_id": "000000000000000000000001",
+      "name": "Sales Commerce",
+      "description": "Dashboard comercial con detalle de mundo, tiendas y canales.",
+      "icon": "http:\/\/www.siia.net\/archive\/codies\/2015\/finalists\/logos\/Black&White%20Logo.jpg",
+      "url": "http:\/\/sisense.ereaxp.com:80\/app\/main#\/dashboards\/5745b7526ac8ac0007000027?folder=5745b6cf6ac8ac0007000024",
+      "type": "SISENSE",
+      "__v": 0
+    }
+  ]
+}

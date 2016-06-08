@@ -1,0 +1,567 @@
+@import erea-template-variables
+@import erea-template-mixins
+
+html
+	font-family: $font-fam
+	font-weight: $font-weight
+	font-size: $font-size * 1.2
+	height: 100%
+
+body
+	+sizing()
+	+noBorders()
+	height: 100%
+
+	@include respondTo(handhelds)
+		font-size: small
+	@include respondTo(small-screens)
+		font-size: small
+	@include respondTo(medium-screens)
+		font-size: medium
+	@include respondTo(wide-screens)
+		font-size: 100%
+
+.erea-page
+	+sizing()
+	+noBorders()
+	padding-bottom: 45px
+	overflow-y: scroll
+
+.erea-wrapper
+	min-height: 100%
+	position: relative
+
+.erea-footer
+	+sizing()
+	height: 45px
+	padding: 10px 20px
+	width: 100%
+	font-size: $font-size * 1.2
+	span
+		margin: 2px
+	img
+		max-height: 25px
+
+.erea-cell-font
+	font-size: $font-size * 1.2
+
+	.highchart
+		height: auto !important
+
+.right
+	float: right
+
+.text-right
+	text-align: right
+
+.vertical-top
+	vertical-align: top
+
+.vertical-middle
+	vertical-align: middle
+
+.margin-right
+	margin-right: 10px
+
+.margin-left
+	margin-left: 10px
+
+
+// -----------------------------------------------------------------------------
+// Styles del menu de shiny final con bootstrap
+// -----------------------------------------------------------------------------
+div.navbar-collapse[aria-expanded="true"]
+	ul.nav.navbar-nav
+		margin-top: 0
+		padding-top: 7
+		box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.3)
+		background-color: $nav-bg-color
+
+nav
+	+sizing()
+	max-height: $header-size
+	width: 100%
+	div.container
+		max-height: $header-size
+		width: 100%
+		border-bottom: 1px solid $scale-grey-2
+	ul.nav
+		+sizing()
+		float: right
+
+		li
+			+sizing()
+		@media only screen and (min-width: 768px)
+			li:nth-child(4)
+				.dropdown-menu
+					left: -113px
+
+ul.dropdown-menu
+	li
+		a
+			font-weight: $font-weight
+.navbar-default 
+	.navbar-nav > li > a
+		line-height: $font-size * 1.6
+		b.caret
+			color: $client-color
+
+.navbar
+	position: fixed !important
+	top: 0
+
+	.container
+		padding: 0 20px
+	.navbar-header
+		.navbar-brand
+			padding: 3px 0
+			margin-left: 0 !important
+		img
+			max-height: 100%
+
+.container-fluid
+	padding: $header-size 0 0 0 !important
+
+	.tab-content:nth-of-type(2)
+		padding-top: 36px !important
+	.row
+		margin: 0
+	.row:first-child
+		position: fixed
+		width: 100%
+		z-index: 999 !important
+
+.navbar.navbar-default
+	margin: 0
+	background-color: $erea-color-inv
+	border: none
+.navbar-default
+	.navbar-nav > .active > a
+		max-height: $header-size
+		background-color: transparent !important
+		border-bottom: 3px solid $client-color
+
+
+.erea-title
+	background-color: $scale-grey-1
+	padding-top: 5px
+	padding-bottom: 5px
+	padding-left: 20px
+	padding-right: 20px
+	h1
+		font-weight: $font-weight
+		font-size: $font-size * 1.8
+		line-height: $font-size * 1.8
+		margin: 0 !important
+		display: inline
+	.erea-display-date
+		font-size: $font-size * 1.2
+		line-height: $font-size * 1.2
+		color: $scale-grey-5
+		display: inline-block
+		vertical-align: middle
+
+	.erea-title-label
+		font-size: $font-size * 1.8
+		vertical-align: middle
+
+	.erea-title-icon
+		padding-left: 10px
+		padding-right: 10px
+
+.nav.nav-tabs
+	border-bottom: 1px solid $scale-grey-2
+	padding: 1px 20px 0
+	background-color: $scale-grey-1
+	li
+		margin: 0
+		margin-right: 0
+
+.nav.nav-tabs > li > a
+	+sizing()
+	padding: 7px 25px
+	background-color: $scale-grey-1
+	color: $scale-grey-4
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	margin-top: 2px
+	margin-bottom: -1px
+	border-bottom: 1px solid $scale-grey-2
+	font-size: $font-size * 1.4
+
+.nav.nav-tabs > li.active > a
+	+sizing()
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	background-color: $scale-grey-0
+	color: $scale-grey-5
+
+.nav.nav-tabs > li.active > a:hover
+	+sizing()
+	background-color: $scale-grey-0
+	color: $scale-grey-5
+	text-shadow: none
+
+.nav.nav-tabs > li:hover > a
+	+sizing()
+	background-color: $scale-grey-1
+	color: $scale-grey-5
+	border-top: 1px solid transparent
+	border-left: 1px solid transparent
+	border-right: 1px solid transparent
+	text-shadow: 0px 1px rgba(0,0,0,0.15)
+
+.tabbable
+	.tab-content
+		background-color: $scale-grey-0
+		padding: 15px 20px
+
+
+.tabbable .tabbable
+	width: 100%
+
+.erea-content-container
+	.tab-content
+		.tab-pane
+			font-size: 0px 
+		div.tab-pane > div
+			+sizing()
+			display: inline-block
+			padding: 5px
+			//padding-left: 15px
+			vertical-align: top
+			font-size: $font-size * 1.2
+		div.tab-pane > div.erea-row
+			font-size: 0px
+		div.tab-pane > div.erea-buttonset
+			width: 100%
+			padding: 0
+
+	.tabbable:first-child
+		.tab-content
+			padding-top: 35px !important
+
+svg
+	width: 100% !important
+	*
+		font-family: $font-fam
+
+.erea-filter-box
+	font-family: $font-fam
+	background-color: $scale-grey-1
+
+	label
+		font-weight: $font-weight * 1.5
+
+.erea-filter-panel
+	font-size: $font-size * 1.2
+	position: fixed
+	right: 20px
+	background-color: white
+	text-align: left
+	padding: 10px
+	border-radius: 3px
+	-webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32)
+	-moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32)
+	box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.32)
+	margin-top: 10px
+	z-index: 2000
+	.control-label
+		color: $scale-grey-4
+		font-weight: $font-weight + 100
+		font-size: $font-size * 1.4
+
+.erea-filter-tag
+	display: inline-block
+
+.erea-row
+	font-size: 0px 
+	width: 100%
+	.dataTables_wrapper 
+		.dataTables_paginate 
+			a.paginate_button
+				background-image: none
+				color: $scale-grey-3 !important
+				&:hover
+					border-color: transparent
+					text-decoration: underline !important
+				&:active
+					box-shadow: none
+			a.paginate_button.current
+				background-image: none
+				color: $scale-grey-3 !important
+				border-color: $scale-grey-3 !important
+				&:hover
+					color: $scale-grey-3 !important
+					border-color: $scale-grey-3
+					text-decoration: none !important
+				&:active
+					color: $scale-grey-3 !important
+					border-color: $scale-grey-3
+					text-decoration: none !important
+
+.form-group
+	margin-bottom: 0px !important
+
+.selectize-control
+	margin-bottom: 0px !important
+
+@include respondTo(handhelds)
+	.padding-h-left
+		padding-left: 20px
+	.padding-h-right
+		padding-right: 20px
+	.padding-h-top
+		padding-top: 20px
+	.padding-h-bottom
+		padding-bottom: 20px
+	.margin-h-left
+		margin-left: 10px
+	.margin-h-right
+		margin-right: 10px
+	.margin-h-top
+		margin-top: 10px
+	.margin-h-bottom
+		margin-bottom: 10px
+
+@include respondTo(small-screens)
+	.padding-s-left
+		padding-left: 20px
+	.padding-s-right
+		padding-right: 20px
+	.padding-s-top
+		padding-top: 20px
+	.padding-s-bottom
+		padding-bottom: 20px
+	.margin-s-left
+		margin-left: 10px
+	.margin-s-right
+		margin-right: 10px
+	.margin-s-top
+		margin-top: 10px
+	.margin-s-bottom
+		margin-bottom: 10px
+
+@include respondTo(medium-screens)
+	.padding-m-left
+		padding-left: 20px
+	.padding-m-right
+		padding-right: 20px
+	.padding-m-top
+		padding-top: 20px
+	.padding-m-bottom
+		padding-bottom: 20px
+	.margin-m-left
+		margin-left: 10px
+	.margin-m-right
+		margin-right: 10px
+	.margin-m-top
+		margin-top: 10px
+	.margin-m-bottom
+		margin-bottom: 10px
+
+@include respondTo(wide-screens)
+	.padding-left
+		padding-left: 20px
+	.padding-right
+		padding-right: 20px
+	.padding-top
+		padding-top: 20px
+	.padding-bottom
+		padding-bottom: 20px
+	.margin-left
+		margin-left: 10px
+	.margin-right
+		margin-right: 10px
+	.margin-top
+		margin-top: 10px
+	.margin-bottom
+		margin-bottom: 10px
+
+.overflow-x-scroll
+	overflow-x: scroll
+
+.home-title h1
+	font-weight: 300
+	font-size: 30px
+
+
+// Static Headers
+body
+	.erea-content-container:first-of-type
+		.tabs-above
+			.nav-tabs:first-of-type
+				position: fixed
+				width: 100%
+				z-index: 998 !important
+
+.erea-buttonset
+	.tabbable
+		.tab-content
+			padding: 0
+	ul.nav.nav-tabs
+		background-color: $scale-grey-0
+		float: right
+		border: none
+		padding: 0
+		padding-bottom: 10px
+		margin-top: 10px
+		position: static !important
+		width: auto !important
+
+		li
+			margin: none
+			a
+				background-color: $scale-grey-0
+				margin: 0 !important
+				border: 1px solid $scale-grey-2
+				border-radius: 0
+		li:first-child
+			a
+				border-top-left-radius: 3px
+				border-bottom-left-radius: 3px
+		li:last-child
+			a
+				border-top-right-radius: 3px
+				border-bottom-right-radius: 3px
+		li.active
+			a
+				background-color: $scale-grey-2
+li
+	a
+		outline: none !important
+
+.erea-filter-list
+	display: inline-block
+
+.erea-filter-button
+	+ereaButton()
+	display: inline
+	&:hover
+		+ereaButtonHover()
+
+	&:active
+		+ereaButtonActive()
+
+.erea-hidden
+	display: none !important
+
+.glyphicon
+	position: static !important
+
+.erea-filter-tag
+	padding: 5px
+	border: 1px solid $scale-grey-2
+	border-radius: 3px
+	margin-left: 5px
+
+	@include respondTo(handhelds)
+		margin-top: 2px
+		margin-bottom: 2px
+
+	@include respondTo(small-screens)
+		margin-top: 2px
+		margin-bottom: 2px
+
+.erea-filter-tag:first-child
+	@include respondTo(handhelds)
+		margin-left: 0px !important
+	@include respondTo(small-screens)
+		margin-left: 0px !important
+
+	.erea-filter-label
+		vertical-align: middle
+		font-size: $font-size * 1.2
+	.erea-filter-tag-delete
+		display: inline-block
+		border: none
+		padding: 0
+		padding-left: 5px
+		width: 20px
+		height: 12px
+		background-image: url($delete-image)
+		background-color: transparent
+		background-repeat: no-repeat
+		background-size: 12px 12px
+		background-position: 5px 0
+
+	.erea-filter-tag-delete:hover
+		background-image: url($delete_hover-image)
+
+.shiny-output-error
+	color: #B94528 !important
+
+.datatables
+	overflow-x: scroll !important
+	label
+		color: $scale-grey-4
+	th
+		color: $scale-grey-4
+
++mobileCells()
+
+.erea-page
+	+sizing()
+	+noBorders()
+	overflow-y: scroll
+
+.noUi-connect
+	background-color: $scale-green-1 !important
+
+// ------------------------------------------------------------
+// CENCOSUD
+// ------------------------------------------------------------
+nav.navbar
+	font-family: $font-fam
+	font-weight: $font-weight
+	font-size: $font-size * 1.2
+	.container
+		+sizing()
+		.navbar-header
+			+sizing()
+			display: inline-block
+			height: 50px
+			padding: 4px 0
+		.navbar-collapse.collapse
+			+sizing()
+			display: inline-block
+			float: right
+			height: 50px
+ul.nav
+	+sizing()
+	margin: 0
+	li
+		+sizing()
+		display: inline-block
+		a
+			+sizing()
+			display: inline-block
+			padding: 15px
+			vertical-align: top
+			text-decoration: none
+			color: #777
+			font-size: $font-size * 1.4
+			cursor: pointer
+			border-bottom: 3px solid transparent
+			line-height: $font-size * 1.6
+		a:hover
+			color: #333
+
+.erea-footer
+	span
+		display: inline-block
+		vertical-align: top
+	a
+		display: inline-block
+		height: 100%
+
+iframe
+	width: 100%
+	height: 100%
+	margin: 0
+	margin-top: 50px
+	padding: 0
+	border: none
+	display: none
+iframe.active
+	display: block

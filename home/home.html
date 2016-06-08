@@ -1,0 +1,42 @@
+<div class="erea-row nav-bar" ng-controller="MenuCtrl">
+	<div class="erea-cell-10 logo vertical-middle">
+		<a href="http://ereaxp.com" target="_blank">link</a>
+	</div>
+	<div class="erea-cell-90 text-right vertical-middle">
+		<div class="erea-row">
+			<div class="erea-cell-100 text-font-size">
+				<span class="message">{{message.text}}</span>
+			</div>
+		</div>
+		<div class="erea-row">
+			<div class="erea-cell-100 text-small-font-size">
+				<a class="link" href="" ng-click="go('/logout')">logout</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div>
+	<div style="margin-top: 10px">User Profile - El home</div>
+	<pre><code>{{auth.profile | json}}</code></pre>
+</div> -->
+
+<div class="erea-dashboards erea-row">
+	<div class="erea-cell-25 padding vertical-top" ng-repeat="dashboard in dashboards">
+		<a target="_blank" href="{{dashboard.url}}" class="padding erea-cell-100 erea-db-button ">
+		  <div class="erea-row">
+		      <div class="erea-cell-100">
+		        <div class="erea-db-icon" style="background-image:url({{dashboard.icon}});"></div>
+		      </div>
+		  </div>
+		  <div class="erea-row">
+		      <div class="erea-cell-100 text-center">
+		          <label class="erea-db-label"> {{dashboard.name}}</label>
+		      </div>
+		      <div class="erea-cell-100 text-center text-small-font-size padding">
+		          {{dashboard.description}}
+		      </div>
+		  </div>
+		</a>
+	</div>
+</div>

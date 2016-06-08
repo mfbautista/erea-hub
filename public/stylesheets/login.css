@@ -1,0 +1,118 @@
+.erea-row {
+  font-size: 0px;
+  width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-font-size {
+  font-size: 16px; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.vertical-middle {
+  vertical-align: middle; }
+
+.vertical-bottom {
+  vertical-align: bottom; }
+
+.padding-bottom {
+  padding-bottom: 5px; }
+
+.padding-top {
+  padding-top: 5px; }
+
+.padding-left {
+  padding-left: 5px; }
+
+.padding-right {
+  padding-right: 5px; }
+
+.padding {
+  padding: 5px; }
+
+.margin {
+  margin: 5px; }
+
+#login-container {
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+  padding-top: 20px; }
+
+#login-logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px; }
+
+#login-btn {
+  border: 1px solid #00C080;
+  background-color: #05C67C;
+  border-radius: 3px;
+  font-size: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 12px; }
+  #login-btn:hover {
+    -webkit-box-shadow: 0px 2px 1px 0px transparent;
+    -moz-box-shadow: 0px 2px 1px 0px transparent;
+    box-shadow: 0px 2px 1px 0px transparent;
+    border: 1px solid #449260; }
+  #login-btn:active {
+    background-color: #00C080;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    color: white; }
+
+#google-login {
+  border: 1px solid #4d90fe;
+  background-color: #3079ed;
+  border-radius: 3px;
+  font-size: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none; }
+  #google-login:hover {
+    -webkit-box-shadow: 0px 2px 1px 0px transparent;
+    -moz-box-shadow: 0px 2px 1px 0px transparent;
+    box-shadow: 0px 2px 1px 0px transparent;
+    border: 1px solid #2f5bb7; }
+  #google-login:active {
+    background-color: #2f5bb7;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32) inset;
+    color: white; }
+
+.login-title {
+  font-size: 36px;
+  font-weight: 200; }
+
+.login-subtitle {
+  font-size: 20px;
+  font-weight: 200; }
+
+.divisor {
+  background-color: #DFDEDE;
+  height: 1px; }
+
+/*# sourceMappingURL=login.css.map */

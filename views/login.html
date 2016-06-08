@@ -1,0 +1,48 @@
+<div class="erea-row">
+  <div id="login-container" class="erea-cell-50 erea-cell-h-80 erea-cell-s-75 erea-cell-m-50 text-center">
+    <div class="erea-row padding">
+      <div class="erea-cell-20 erea-cell-h-45 erea-cell-s-35 erea-cell-m-30">
+        <img id="login-logo" src="/home/erealogo.png" />
+      </div>
+    </div>
+    <div class="erea-row padding">
+      <h1 class="login-title">Bienvenido a Erea Hub</h1>
+      <h2 class="login-subtitle">Iniciar sesión</h2>
+    </div>
+    <div class="erea-row padding center">
+      <div class="erea-cell-20 padding"></div>
+      <div class="erea-cell-20 padding">
+        <a href="" class="text-font-size" id="google-login" ng-click="doGoogleAuthWithPopup()">Google</a>
+      </div>
+      <div class="erea-cell-20 padding"></div>
+    </div>
+    <div class="erea-row">
+      <div class="erea-cell-20 erea-cell-h-1"></div>
+      <div class="erea-cell-25 vertical-middle erea-cell-h-38 erea-cell-s-25 erea-cell-m-25 divisor"></div>
+      <div class="text-font-size erea-cell-5 erea-cell-h-10 erea-cell-s-5 erea-cell-m-5 vertical-middle" style="color:#DFDEDE">&nbsp;O&nbsp;</div>
+      <div class="erea-cell-25 erea-cell-h-38 erea-cell-s-25 erea-cell-m-25 divisor vertical-middle"></div>
+      <div class="erea-cell-20 erea-cell-h-1"></div>
+    </div>
+    <div class="erea-row padding margin">
+      <form ng-submit="submit()">
+        <fieldset>
+          <div class="erea-row padding">
+            <input type="text" placeholder="Correo electrónico" class="erea-cell-50 erea-form-field text-font-size"  name="user" ng-model="user" ng-disabled="loading" />
+          </div>
+          <div class="erea-row padding">
+            <input type="password" placeholder="Contraseña" class="erea-cell-50 erea-form-field text-font-size" name="pass" ng-model="pass" ng-disabled="loading" />
+          </div>
+          <div class="erea-row padding">
+            <button id="login-btn" type="submit" ng-disabled="loading">Log in</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="erea-row">
+      <div class="text-font-size erea-cell-100">
+        <span class="message">{{message.text}}</span>
+        <span class="error">{{errorMessage.text}}</span>
+      </div>
+    </div>
+  </div>
+</div>

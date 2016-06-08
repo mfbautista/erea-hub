@@ -1,0 +1,50 @@
+.erea-row {
+  font-size: 0px;
+  width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-font-size {
+  font-size: 16px; }
+
+.text-small-font-size {
+  font-size: 12px; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.vertical-middle {
+  vertical-align: middle; }
+
+.vertical-bottom {
+  vertical-align: bottom; }
+
+.padding-bottom {
+  padding-bottom: 5px; }
+
+.padding-top {
+  padding-top: 5px; }
+
+.padding-left {
+  padding-left: 5px; }
+
+.padding-right {
+  padding-right: 5px; }
+
+.padding {
+  padding: 5px; }
+
+.margin {
+  margin: 5px; }
+
+.margin-auto {
+  margin-x: auto; }
+
+/*# sourceMappingURL=mixins.css.map */
